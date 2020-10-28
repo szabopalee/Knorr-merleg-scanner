@@ -6,7 +6,7 @@
 import socket
 
 TCP_IP = '172.27.51.35' # this IP of my pc. When I want raspberry pi 2`s as a client, I replace it with its IP '169.254.54.195'
-TCP_PORT = 4035
+TCP_PORT = 4305
 BUFFER_SIZE = 1024
 MESSAGE = "S"
 
