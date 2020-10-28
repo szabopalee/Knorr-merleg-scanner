@@ -13,7 +13,11 @@ MESSAGE = "S"
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))
 s.send(MESSAGE)
-data = s.recv(BUFFER_SIZE)
+print("Message sent")
+response, addr = s.recvfrom(TCP_PORT)
+response_id = struct.unpack('!H', response[4:6])
+print(response_id)
+#data = s.recv(BUFFER_SIZE)
 s.close()
 
 print ("received data:", data)
